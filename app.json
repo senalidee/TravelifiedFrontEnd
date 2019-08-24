@@ -3,7 +3,10 @@
     "name": "Gamified Travel Community App",
     "slug": "GamifiedTourismApp",
     "privacy": "public",
-    "sdkVersion": "32.0.0",
+    "sdkVersion": "34.0.0",
+    "androidStatusBar": {
+      "backgroundColor": "#000000"
+    },
     "platforms": [
       "ios",
       "android"

@@ -10,7 +10,6 @@ export default class FloatingLabelExample extends Component {
   render() {
     return (
       <Container>
-        <Header />
         <Content>
           <Form>
 
