@@ -1,9 +1,9 @@
 {
   "devToolsPort": 19003,
-  "expoServerPort": null,
-  "packagerPort": null,
-  "packagerPid": null,
+  "expoServerPort": 19004,
+  "packagerPort": 19005,
+  "packagerPid": 13845,
   "expoServerNgrokUrl": "https://a9-9vb.nadunkulatunge.travelifiedfrontend.exp.direct",
   "packagerNgrokUrl": "https://packager.a9-9vb.nadunkulatunge.travelifiedfrontend.exp.direct",
-  "ngrokPid": 13411
+  "ngrokPid": 13866
 }

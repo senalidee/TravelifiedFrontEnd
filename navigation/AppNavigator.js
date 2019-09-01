@@ -34,6 +34,6 @@ export default createAppContainer(createStackNavigator({
   DiscoverPlaces: DiscoverPlaces
 },
 {
-  initialRouteName: 'FBAuthInit',
+  initialRouteName: 'Home',
 }
 ));

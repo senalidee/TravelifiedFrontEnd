@@ -38,6 +38,14 @@ export default class HomeScreen extends React.Component {
                     onPress = {() => {this.props.navigation.navigate('RatingsProfile')}}
                 >
                 <Text> Ratings Profile </Text>
+                
+                </Button>
+
+                <Button primary style = {{paddingTop: 20}}
+                    onPress = {() => {this.props.navigation.navigate('TestScreen')}}
+                >
+                <Text> Test Screen </Text>
+                
                 </Button>
 
                 <Button primary style = {{paddingTop: 20}}
