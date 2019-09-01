@@ -1,3 +1,7 @@
 {
+<<<<<<< Updated upstream
   "backEndURL":"http://192.168.8.186:9999/api/"
+=======
+  "backEndURL":"https://travel.free.beeceptor.com/api/"
+>>>>>>> Stashed changes
 }
