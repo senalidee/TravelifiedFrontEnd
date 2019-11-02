@@ -1,8 +1,8 @@
 import * as Expo from "expo";
-import { Font } from 'expo';
-import { Ionicons } from '@expo/vector-icons';
-import React, { Component } from "react";
-import { StyleProvider } from "native-base";
+import {Font} from "expo";
+import {Ionicons} from '@expo/vector-icons';
+import React, {Component} from "react";
+import {StyleProvider} from "native-base";
 
 import App from "../App";
 import getTheme from "../theme/components";
@@ -35,7 +35,7 @@ export default class Setup extends Component {
       // EvilIcons: require("native-base/Fonts/EvilIcons.ttf"),
         // ...Ionicons.font,
     });
-    console.log("Done Loading fonts!")
+    console.log("Done Loading fonts!");
     this.setState({ isReady: true });
   }
   render() {

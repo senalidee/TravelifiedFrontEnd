@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet } from 'react-native';
 import { Constants, MapView, Location, Permissions } from 'expo';
+
 import {Button, Text, View} from 'native-base';
 
 
@@ -37,14 +38,15 @@ export default class MapScreen extends Component {
       <View style={styles.container}>
         <MapView
           style={{ alignSelf: 'stretch', height: 200 }}
-          region={{ latitude: this.state.location.coords.latitude, longitude: this.state.location.coords.longitude, latitudeDelta: 0.0922, longitudeDelta: 0.0421 }}
+          region={{ latitude: this.state.location.coords.latitude,
+              longitude: this.state.location.coords.longitude, latitudeDelta: 0.0922, longitudeDelta: 0.0421 }}
           onRegionChange={this._handleMapRegionChange}
         >
-    <MapView.Marker
-      coordinate={this.state.location.coords}
-      title="My Marker"
-      description="Some description"
-    />
+            <MapView.Marker
+              coordinate={this.state.location.coords}
+              title="My Marker"
+              description="Some description"
+            />
         </MapView>
       
         <Text>

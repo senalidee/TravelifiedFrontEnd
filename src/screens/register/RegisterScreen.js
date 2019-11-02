@@ -1,27 +1,12 @@
 import React from 'react';
-import {
-    Container,
-    Header,
-    Title,
-    Content,
-    Button,
-    Icon,
-    Body,
-    Left,
-    Right,
-    Item,
-    Input,
-    Picker,
-    Label,
-    Form,
-    View
-    } from "native-base";
-    import { Image, AsyncStorage} from "react-native";
+import {Container, Content, Form, Input, Item, Label, View} from "native-base";
+import {AsyncStorage, Image} from "react-native";
 
-  import getTheme from '../../theme/components';
-  import material from '../../theme/variables/material';
-  import { SocialIcon } from 'react-native-elements'
-  const config = require('../../config/config.json');
+import getTheme from '../../theme/components';
+import material from '../../theme/variables/material';
+import {SocialIcon} from 'react-native-elements'
+
+const config = require('../../config/config.json');
 
 
 export default class RegiterScreen extends React.Component {
