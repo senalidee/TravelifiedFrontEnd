@@ -11,9 +11,11 @@ import RatingsProfileScreen from '../src/screens/ratingsprofile/RatingsProfile'
 import TestScreen from '../src/screens/test/TestScreen'
 import ChatScreen from '../src/screens/chat/ChatScreen'
 import MyConversations from '../src/screens/chat/MyConversations'
-import AddFriendsScreen from '../src/screens/addfriends/AddFriendsScreen'
+import FriendsHome from '../src/screens/friends/FriendsHome'
 import CreateGroup from '../src/screens/chat/CreateGroup'
+import EditGroup from '../src/screens/chat/EditGroup'
 import DiscoverPlaces from '../src/screens/discoverplaces/DiscoverPlaces'
+import GuidesHome from '../src/screens/guides/GuidesHome'
 
 
 export default createAppContainer(createStackNavigator({
@@ -29,9 +31,11 @@ export default createAppContainer(createStackNavigator({
   TestScreen: TestScreen,
   Chat: ChatScreen,
   Conversations: MyConversations,
-  AddFriends: AddFriendsScreen,
+  AddFriends: FriendsHome,
   CreateGroup: CreateGroup,
-  DiscoverPlaces: DiscoverPlaces
+  EditGroup: EditGroup,
+  DiscoverPlaces: DiscoverPlaces,
+  GuidesHome: GuidesHome
 },
 {
   initialRouteName: 'Home',

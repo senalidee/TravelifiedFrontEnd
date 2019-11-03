@@ -10,6 +10,12 @@ import * as Location from 'expo-location';
 import flagBlueImg from '../../../assets/images/flag-blue.png';
 import flagPinkImg from '../../../assets/images/flag-pink.png';
 
+
+/*
+This page can be used to allow people to discover places. All the places users can travel or else places near that person can be sent from the backend and these data can be shown in this page.
+When the user clicks on a place he or she can view details about that place. After that, user can click on to open directions from google maps.
+*/
+
 const Style = StyleSheet.create({
   container: {
     flex: 1,

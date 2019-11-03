@@ -80,6 +80,12 @@ export default class HomeScreen extends React.Component {
                 <Text> Discover Places </Text>
                 </Button>
 
+                <Button primary style = {{paddingTop: 20}}
+                    onPress = {() => {this.props.navigation.navigate('GuidesHome')}}
+                >
+                <Text> Guides Home </Text>
+                </Button>
+
 
         
             </Content>

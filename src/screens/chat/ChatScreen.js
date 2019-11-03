@@ -7,11 +7,17 @@ import {
 } from "react-native";
 const config = require('../../config/config.json');
 
+/*
+This is the chat screen. It shows all the messages in a group. 
+If we insert all the messages to the messages field in the given format messages will be shown in this page.
+*/ 
+
 export default class ChatScreen extends React.Component {
   state = {
-    messages: [],
-    bId: 1234,
-    firstName: 'Nadun',
+    messages: [], //All the messages
+    bId: 1234, 
+    groupid: this.props.navigation.state.params.groupid,
+    firstName: 'Nadun', //Current user details
     lastName: 'Kulatunge',
     email: 'nadun@email.com',
     picture: 'https://randomuser.me/api/portraits/lego/5.jpg',
@@ -19,6 +25,7 @@ export default class ChatScreen extends React.Component {
   }
 
   componentWillMount() {
+    alert(this.props.navigation.state.params.groupid)
     this.setState({
       messages: [
         {
@@ -98,7 +105,7 @@ export default class ChatScreen extends React.Component {
         }
       }]
     */
-    this._getMessages();
+    this.timer = setInterval(()=> this._getMessages(), 5000)
   }
 
   _getMessages = async () => {
@@ -123,7 +130,7 @@ export default class ChatScreen extends React.Component {
     }
   }
 
-  onSend(messages = []) {
+  onSend(messages = []) { 
     this.setState(previousState => ({
       messages: GiftedChat.append(previousState.messages, messages),
     }))

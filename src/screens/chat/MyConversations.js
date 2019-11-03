@@ -4,6 +4,10 @@ import {Ionicons} from '@expo/vector-icons';
 import { responsiveFontSize } from 'react-native-responsive-dimensions';
 import Moment from 'moment';
 
+/*
+This page contains all the messages user has recieved and when the user clicks on a message 
+the person will be taken to the ChatScreen with its GroupID
+*/
 
 export default class MyConversations extends Component {
     constructor(props) {
@@ -11,22 +15,16 @@ export default class MyConversations extends Component {
         this.state = {
           conversations : [
                 {
-                  groupid: 123,
-                  name: 'Nelson Watts',
-                  avatar: 'https://randomuser.me/api/portraits/lego/5.jpg',
-                  userid: 10,
-                  text: 'Some Group Message1',
-                  time: '2019-09-01T05:15:19.391Z',
-                  unreadCount: 2
+                  groupid: "1111111111",
+                  groupTitle: 'Sample Title',
+                  category: 'Some Category',
+                  time: '2019-09-01'
                 },
                 {
-                  groupid: 124,
-                  name: 'Dorothy N. Mertz',
-                  avatar: 'https://randomuser.me/api/portraits/lego/8.jpg',
-                  userid: 17,
-                  text: 'Some Group Message2',
-                  time: '2019-09-01T05:15:19.391Z',
-                  unreadCount: 0
+                  groupid: "1111111112",
+                  groupTitle: 'Sample Title2',
+                  category: 'Some Category2',
+                  time: '2019-09-02',
                 }
           ]
         };
@@ -43,20 +41,17 @@ export default class MyConversations extends Component {
           <List dataArray={this.state.conversations} renderRow={(item) =>
               <ListItem thumbnail button onPress={() => this.conversationClicked(item.groupid)}>
                 <Left>
-                  <Thumbnail source={{ uri: item.avatar }} />
+                  <Ionicons style={{color: 'rgba(0,0,0,0.5)'}} name='ios-chatbubbles' size={responsiveFontSize(4)}/>
                 </Left>
                 <Body>
-                  <Text>{item.name}</Text>
-                  <Text note numberOfLines={1}>{item.text}</Text>
+                  <Text>{item.groupTitle}</Text>
+                  <Text note numberOfLines={1}>Category: {item.category}</Text>
                 </Body>
                 <Right>
-                  <Text note>{Moment(item.time, "YYYYMMDD").fromNow()}</Text>
-                  {item.unreadCount>0 ?
-                    <Text note>({item.unreadCount})</Text>
-                    :
-                    <Text note></Text>
-                  }
-                  
+                  <Ionicons style={{color: 'rgba(0,0,0,0.5)'}} name='md-settings' size={responsiveFontSize(2)} 
+                    button onPress={() => this.props.navigation.navigate('EditGroup',  { 
+                    groupid: item.groupid})
+                  }/>
                 </Right>
               </ListItem>
           }>
