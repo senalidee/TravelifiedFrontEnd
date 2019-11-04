@@ -26,11 +26,7 @@ export default class HomeScreen extends React.Component {
                 <Text> News Feed </Text>
                 </Button>
 
-                <Button primary style = {{paddingTop: 20}}
-                    onPress = {() => {console.log("Add Friend Pressed!")}}
-                >
-                <Text> Add Friend </Text>
-                </Button>
+                
 
                 <Button primary style = {{paddingTop: 20}}
                     onPress = {() => {console.log("Messages Pressed!")}}
@@ -42,7 +38,54 @@ export default class HomeScreen extends React.Component {
                     onPress = {() => {this.props.navigation.navigate('RatingsProfile')}}
                 >
                 <Text> Ratings Profile </Text>
+                
                 </Button>
+
+                <Button primary style = {{paddingTop: 20}}
+                    onPress = {() => {this.props.navigation.navigate('TestScreen')}}
+                >
+                <Text> Test Screen </Text>
+                
+                </Button>
+
+                <Button primary style = {{paddingTop: 20}}
+                    onPress = {() => {this.props.navigation.navigate('Chat')}}
+                >
+                <Text> Chat Screen </Text>
+                
+                </Button>
+
+                <Button primary style = {{paddingTop: 20}}
+                    onPress = {() => {this.props.navigation.navigate('Conversations')}}
+                >
+                <Text> My Conversations </Text>
+                
+                </Button>
+
+                <Button primary style = {{paddingTop: 20}}
+                    onPress = {() => {this.props.navigation.navigate('AddFriends')}}
+                >
+                <Text> Add Friend </Text>
+                </Button>
+
+                <Button primary style = {{paddingTop: 20}}
+                    onPress = {() => {this.props.navigation.navigate('CreateGroup')}}
+                >
+                <Text> Create Chat Group </Text>
+                </Button>
+
+                <Button primary style = {{paddingTop: 20}}
+                    onPress = {() => {this.props.navigation.navigate('DiscoverPlaces')}}
+                >
+                <Text> Discover Places </Text>
+                </Button>
+
+                <Button primary style = {{paddingTop: 20}}
+                    onPress = {() => {this.props.navigation.navigate('GuidesHome')}}
+                >
+                <Text> Guides Home </Text>
+                </Button>
+
 
         
             </Content>
